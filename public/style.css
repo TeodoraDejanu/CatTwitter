@@ -1,0 +1,19 @@
+img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+}
+.cardC {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+body {
+  background-color: #f8dddd;
+}
+@media only screen and (max-width: 800px) {
+  .cardC {
+    justify-content: center;
+    gap: 10px;
+  }
+}

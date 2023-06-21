@@ -1,0 +1,16 @@
+[
+  {
+    "id": 4,
+    "title": "Tweet1",
+    "content": "Content 1",
+    "category": "british",
+    "photo": "cat.png"
+  },
+  {
+    "id": 5,
+    "title": "Tweet1",
+    "content": "Content 1",
+    "category": "british",
+    "photo": "cat.png"
+  }
+]
