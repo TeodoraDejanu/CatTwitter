@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #f8dddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script>
+    <h1 class="text-center">Create new tweet</h1>
+    <div class="container mt-5" style="width: 40%">
+      <form
+        class="p-5 shadow-lg"
+        method="POST"
+        action="/tweets"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="title" class="form-label"> Title</label>
+          <input type="text" class="form-control" name="title" id="title" />
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label"> Content</label>
+          <input type="text" class="form-control" name="content" id="content" />
+        </div>
+        <div class="mb-3">
+          <label for="category">Choose your breed:</label>
+          <select id="category" name="category">
+            <option value="british">British</option>
+            <option value="siamese">Siamese</option>
+            <option value="persian">Persian</option>
+            <option value="sphynx">Sphynx</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="page_Photo" class="form-label">Image</label>
+          <input
+            type="file"
+            class="form-control"
+            name="page_Photo"
+            id="page_Photo"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
